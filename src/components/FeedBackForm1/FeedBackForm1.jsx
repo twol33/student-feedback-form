@@ -13,12 +13,16 @@ function FeedBackForm1() {
         event.preventDefault();
 
         dispatch({ type:'SET_FEELING', payload: { feeling: feeling }})
+
+        history.push('/2')
     }
 
-    history.push('/2')
+    
 
     return(
         <section>
+            <h1>How are you feeling today?</h1>
+            <h3>Feeling?</h3>
             <form onSubmit  = { submitFeeling } >
                 <input 
                     required
