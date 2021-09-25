@@ -15,10 +15,10 @@ function FeedBackForm1() {
         dispatch({ type:'SET_FEELING', payload: { feeling: feeling }})
     }
 
-    history.push('/')
+    history.push('/2')
 
     return(
-        <div>
+        <section>
             <form onSubmit  = { submitFeeling } >
                 <input 
                     required
@@ -29,7 +29,7 @@ function FeedBackForm1() {
 
                 <button type="number">Next</button>
             </form>
-        </div>
+        </section>
     )
 
 }

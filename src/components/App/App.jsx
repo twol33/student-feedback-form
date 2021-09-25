@@ -6,7 +6,7 @@ import FeedBackForm2 from '../FeedBackForm2/FeedBackForm2';
 import FeedBackForm3 from '../FeedFormForm3/FeedBackForm3';
 import FeedBackForm4 from '../FeedBackForm4/FeedBackForm4';
 import FeedbackReview from '../FeedbackReview/FeedbackReview';
-// import FeedBackForm1 from '../FeedBackForm1/FeedBackForm1';
+import FeedBackForm1 from '../FeedBackForm1/FeedBackForm1';
 
 function App() {
   
@@ -18,9 +18,9 @@ function App() {
       </header>
 
       <Router>
-        {/* <Route exact path='/'>
+        <Route exact path='/'>
           <FeedBackForm1/>
-        </Route> */}
+        </Route>
 
         <Route exact path='/2'>
           <FeedBackForm2/>
