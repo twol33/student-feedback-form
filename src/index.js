@@ -7,16 +7,18 @@ import registerServiceWorker from './registerServiceWorker';
 import { createStore, combineReducers, applyMiddleware } from 'redux';
 import { Provider } from 'react-redux';
 
-const feedbackReducer = ( state = '', action ) => {
+const feedbackReducer = ( state = [], action ) => {
     if( action.type === 'SET_FEELING') {
-        return state;
-    }else if (action.tyoe === 'SET_UNDERSTAND') {
-        return state;
+        return [...state, action.payload];
+    }else if (action.type === 'SET_UNDERSTAND') {
+        return [...state, action.payload];
     }else if (action.type === 'SET_SUPPORT') {
-        return state;
-    }else if (action.type === 'SET_COMMENT') {
-        return state;
-    }  
+        return [...state, action.payload];
+    }else if (action.type === 'SET_COMMENTS') {
+        return [...state, action.payload];
+    }else if (action.type === 'CLEAR_REVIEWS') {
+        return [];
+    }
     return state;
 }
 

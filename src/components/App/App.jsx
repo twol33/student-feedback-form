@@ -7,6 +7,7 @@ import FeedBackForm3 from '../FeedFormForm3/FeedBackForm3';
 import FeedBackForm4 from '../FeedBackForm4/FeedBackForm4';
 import FeedbackReview from '../FeedbackReview/FeedbackReview';
 import FeedBackForm1 from '../FeedBackForm1/FeedBackForm1';
+import FeedBackCompletion from '../FeedBackCompletion/FeedBackCompletion';
 
 function App() {
   
@@ -38,7 +39,11 @@ function App() {
           <FeedbackReview/>
         </Route>
 
+        <Route exact path='/completion'>
+          <FeedBackCompletion/>
+        </Route>
       </Router>
+      
     </div>
   );
 }

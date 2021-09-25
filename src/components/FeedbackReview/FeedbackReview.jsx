@@ -16,7 +16,7 @@ function FeedbackReview(params) {
                 <p>Support:</p>
                 <p>Comments:</p>
             </ul>
-            <button>Submit</button>
+            <button onClick={handToCompletionPage}>Submit</button>
         </div>
     )
 }
