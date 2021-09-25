@@ -12,7 +12,7 @@ function FeedBackForm2() {
     const submitUnderstanding = event => {
         event.preventDefault();
 
-        dispatch({ type:'SET_UNDERSTAND', payload: { Understanding: Understanding }})
+        dispatch({ type:'SET_UNDERSTAND', payload: { understanding: understanding }})
 
         history.push('/3')
     }
