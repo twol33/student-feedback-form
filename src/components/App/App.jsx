@@ -3,14 +3,10 @@ import React from 'react';
 import './App.css';
 import { HashRouter as Router, Route } from 'react-router-dom';
 import { useHistory } from 'react-router-dom';
+import FeedBackForm1 from '../FeedBackForm1/FeedBackForm1';
 
 function App() {
-  const history = useHistory();
-
-  function submitFeeling() {
-    history.push('/')
-  }
-
+  
   return (
     <div className='App'>
       <header className='App-header'>
@@ -21,11 +17,13 @@ function App() {
 
       <h3>Feeling?</h3>
       <input type = 'number' min = '1' max = '5'/>
-      
+      <button onClick={submitFeeling}>NEXT</button>
 
       <Router>
-        <button onClick={submitFeeling}>NEXT</button>
-        <Route exact path='/'></Route>
+        <Route exact path='/'>
+          <FeedBackForm1 />
+        </Route>
+        
         <Route exact path='/2'></Route>
         <Route exact path='/3'></Route>
         <Route exact path='/4'></Route>
