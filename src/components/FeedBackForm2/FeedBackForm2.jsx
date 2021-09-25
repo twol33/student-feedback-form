@@ -1,23 +1,38 @@
-import React from "react";
+import React from 'react';
 import { useHistory } from 'react-router-dom';
+import { useDispatch } from 'react-redux';
+import { useState } from 'react';
 
 function FeedBackForm2() {
+    const [ understanding, setUnderstanding ] = useState('');
+
+    const dispatch = useDispatch();
     const history = useHistory();
 
-    const submitUnderstand = () => {
+    const submitUnderstanding = event => {
+        event.preventDefault();
+
+        dispatch({ type:'SET_UNDERSTAND', payload: { Understanding: Understanding }})
+
         history.push('/3')
     }
 
-
     return(
-        <div>
-            <h1>How are you feeling today?</h1>
-            <h3>Feeling?</h3>
-            <input type = 'number' min = '1' max = '5'/>
-            <button onClick={submitUnderstand}>NEXT</button>
-        </div>
-    )
-    
-}
+        <section>
+            <h1>How well are you understanding the content?</h1>
+            <h3>Understanding?</h3>
+            <form onSubmit  = { submitUnderstanding } >
+                <input 
+                    required
+                    placeholer = '1-5'
+                    value = {understanding}
+                    onChange={ (event) => setUnderstanding( event.target.value )}
+                />
 
+                <button>Next</button>
+            </form>
+        </section>
+    )
+
+}
 export default FeedBackForm2;

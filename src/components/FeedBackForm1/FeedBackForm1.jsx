@@ -29,7 +29,7 @@ function FeedBackForm1() {
                     onChange={ (event) => setFeeling( event.target.value )}
                 />
 
-                <button type="number">Next</button>
+                <button>Next</button>
             </form>
         </section>
     )
