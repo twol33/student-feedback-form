@@ -2,8 +2,9 @@ import './index.css';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './components/App/App';
+import logger from 'redux-logger';
 import registerServiceWorker from './registerServiceWorker';
-import { createStore } from 'redux';
+import { createStore, combineReducers, applyMiddleware } from 'redux';
 import { Provider } from 'react-redux';
 
 const feedbackReducer = ( state = '', action ) => {
@@ -19,7 +20,12 @@ const feedbackReducer = ( state = '', action ) => {
     return state;
 }
 
-const reduxStore = createStore( feedbackReducer )
+const reduxStore = createStore(
+    combineReducers({
+        feedbackReducer
+    }),
+    applyMiddleware(logger) 
+);
 
 ReactDOM.render(
     <Provider store={reduxStore}>
