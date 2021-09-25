@@ -1,6 +1,7 @@
 import React from 'react';
 import { useHistory } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
+import { useState } from 'react';
 
 function FeedBackForm1() {
     const [ feeling, setFeeling ] = useState('');
@@ -8,8 +9,10 @@ function FeedBackForm1() {
     const dispatch = useDispatch();
     const history = useHistory();
 
-    const submitFeeling = (event) => {
-        dispatch({ type: 'SET_FEELING', payload: { feeling: feeling }})
+    const submitFeeling = event => {
+        event.preventDefault();
+
+        dispatch({ type:'SET_FEELING', payload: { feeling: feeling }})
     }
 
     history.push('/')

@@ -15,9 +15,9 @@ function App() {
       </header>
       <h1>How are you feeling today?</h1>
 
-      <h3>Feeling?</h3>
+      {/* <h3>Feeling?</h3>
       <input type = 'number' min = '1' max = '5'/>
-      <button onClick={submitFeeling}>NEXT</button>
+      <button onClick={submitFeeling}>NEXT</button> */}
 
       <Router>
         <Route exact path='/'>
