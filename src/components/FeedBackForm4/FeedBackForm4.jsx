@@ -1,24 +1,39 @@
-import React from "react";
+import React from 'react';
 import { useHistory } from 'react-router-dom';
+import { useDispatch } from 'react-redux';
+import { useState } from 'react';
 
 function FeedBackForm4() {
+    const [ comments, setComments ] = useState('');
+
+    const dispatch = useDispatch();
     const history = useHistory();
 
-    const submitComment = () => {
+    const submitComments = event => {
+        event.preventDefault();
+
+        dispatch({ type:'SET_COMMENTS', payload: { comments: comments }})
+
         history.push('/feedbackReview')
     }
 
-
     return(
-        <div>
+        <section>
             <h1>Any comments you want to leave?</h1>
-
             <h3>Comments</h3>
-            <input type = 'text'/>
-            <button onClick={submitComment}>NEXT</button>
-        </div>
+            <form onSubmit  = { submitComments } >
+                <input 
+                    required
+                    placeholer = 'Comment Here'
+                    value = {comments}
+                    onChange={ (event) => setComments( event.target.value )}
+                />
+
+                <button>Next</button>
+            </form>
+        </section>
     )
-    
+
 }
 
 export default FeedBackForm4;
