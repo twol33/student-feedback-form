@@ -11,7 +11,7 @@ const blankReview = {
     feeling: '',
     understanding: '',
     support: '',
-    comments: '' 
+    comments: '' ,
 }
 
 const feedbackReducer = ( state = blankReview, action ) => {
