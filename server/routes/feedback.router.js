@@ -5,8 +5,8 @@ const router = express.Router();
 router.post('/', (req, res) => {
     let newFeedback = req.body;
 
-    let queryText = `INSERT INTO "books" ("feeling", "understanding", "support", "comments")
-                     VALUES ($1, $2, $3, $4)`;
+    let queryText = `INSERT INTO "feedback" ("feeling", "understanding", "support", "comments")
+                     VALUES ($1, $2, $3, $4);`;
 
     pool.query(queryText, [ newFeedback.feeling, newFeedback.understanding, newFeedback.support, newFeedback.comments ])
         .then(result => {
@@ -16,4 +16,4 @@ router.post('/', (req, res) => {
         });
 });
 
-modules.exports = router;
+module.exports = router;
