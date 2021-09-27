@@ -21,7 +21,7 @@ function FeedBackForm4() {
         <section>
             <h1>Any comments you want to leave?</h1>
             <h3>Comments</h3>
-            <form onSubmit  = { submitComments } >
+            <form id="comment-area" onSubmit  = { submitComments } >
                 <input 
                     placeholer = 'Comment Here'
                     value = {comments}
