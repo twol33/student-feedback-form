@@ -23,7 +23,6 @@ function FeedBackForm4() {
             <h3>Comments</h3>
             <form onSubmit  = { submitComments } >
                 <input 
-                    required
                     placeholer = 'Comment Here'
                     value = {comments}
                     onChange={ (event) => setComments( event.target.value )}
