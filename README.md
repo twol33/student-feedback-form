@@ -4,9 +4,12 @@ Student Feedback Form
 
 ## Description
 
-The task was to create a feedback form for current students to refelct on their schedule for the day. 
+The task was to create a feedback form for current students to refelct on their schedule for the day.
+
 The reflection consists of 4 forms with a question tied to each form. 
+
 The user is able to input a number range of 1-5 (1-least confident) for the first 3 forms and a comments section as the last form. 
+
 After all four forms are complete there will be a summary of their reflection and if the summary is statisfactory, they can submit their review.
 
 # Required Steps
