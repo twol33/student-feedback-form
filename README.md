@@ -4,6 +4,8 @@ Student Feedback Form
 
 ## Description
 
+Duration: 2 days
+
 The task was to create a feedback form for current students to refelct on their schedule for the day.
 
 The reflection consists of 4 forms with a question tied to each form. 
