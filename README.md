@@ -36,6 +36,6 @@ The npm run client command will open up a new browser tab for you!
  - VSCode
  - Postico
     
-# Acknowledgement
+## Acknowledgement
 
 Thank you to Prime Digital Academy and their staff on the support and tools to success in accomplishing this goal.
