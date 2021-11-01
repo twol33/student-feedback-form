@@ -1,6 +1,4 @@
-# Project Name
-
-Student Feedback Form
+# Student Feedback Form
 
 ## Description
 
